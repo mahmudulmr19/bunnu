@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full border;
+}
+
+.chat-bubble {
+  @apply flex gap-5;
+}
+.chat-bubble .avatar {
+  @apply flex items-center justify-center w-10 h-10 rounded-full bg-[#d9d9d9] flex-shrink-0;
+}
+.chat-bubble.bot .avatar {
+  background: linear-gradient(269deg, #2541fc 1.77%, #5466f2 99.15%);
+}
+.chat-bubble .avatar img {
+  width: 22px;
+}
+.post {
+  padding: 10px 20px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 40px;
+  background: #2b2b36;
+  border-radius: 22px;
+  white-space: pre-wrap;
+}
+.chat-bubble.bot .post {
+  background: #21212c;
+}
+.loader {
+  padding: 0 20px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 40px;
+  background: #2b2b36;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+}
