@@ -26,6 +26,10 @@ const Login = () => {
             toast.error("User Not Found");
           } else if (error.code === "auth/wrong-password") {
             toast.error("Wrong Password");
+          } else if (error.code === "auth/user-disabled") {
+            toast.error(
+              "This account has been disabled. Please contact the administrator for more information."
+            );
           }
         });
     }
