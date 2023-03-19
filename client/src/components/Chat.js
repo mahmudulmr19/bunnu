@@ -17,7 +17,7 @@ const Chat = () => {
 
   const fetchBotResponse = async () => {
     const { data } = await axios.post(
-      "http://localhost:3001",
+      "https://bunnu.onrender.com",
       { input },
       {
         headers: {
@@ -60,7 +60,6 @@ const Chat = () => {
     updatePosts("loading...", false, true);
     setInput("");
     fetchBotResponse().then((res) => {
-      console.log(res.bot.trim());
       updatePosts(res.bot.trim(), true);
     });
   };
